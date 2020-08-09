@@ -183,6 +183,117 @@ function get30SWPeople(params) {
     })
   });
 
+  get30SWPeople();
+
+  const newCardForm = document.querySelector('#newCardForm');
+
+  newCardForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(newCardForm);
+
+    let newCardObj = new Object();
+
+    for(let pair of formData.entries()) {
+        console.log(pair)
+
+        newCardObj[pair[0]] = pair[1]
+    }
+
+    /*const newCardHTML = `
+    <div class="scene">
+        <div class="card">
+            
+                <div class="card_face card_face-front">
+                    <div id="front-info">
+                            <img src="swimg/starwars.jpg">
+                            <p>${newCardObj.name}</p>
+                    </div>
+                </div>
+
+                <div class="card_face card_face-back">
+                    <div id="back-info">
+                            <div id="back-header">
+                                <h1 id="back-h1">${newCardObj.name}</h1>
+                            </div>
+                        <div id="backblock">
+                            <div id="back-left">
+                                <p>DOB</p>
+                                <p>SEX</p>
+                                <p>HGT</p>
+                                <p>MASS</p>
+                                <p>EYES</p>
+                                <p>HAIR</p>
+                            </div>
+                            <div id="back-right">
+                                <p>${newCardObj.dob}</p>
+                                <p>${newCardObj.gender}</p>
+                                <p>${newCardObj.height}</p>
+                                <p>${newCardObj.mass}</p>
+                                <p>${newCardObj.eyes}</p>
+                                <p>${newCardObj.hair}</p>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+
+        </div>
+    </div> `*/
+
+    const sceneDiv = document.createElement('div');
+    sceneDiv.className('scene');
+
+        const cardFrontDiv = document.createElement('div');
+        cardFaceDiv.className('card_face card_face-front');
+
+            const frontInfoDiv = document.createElement('div');
+            frontInfoDiv.id('front-info');
+                
+                const img = document.createElement('img');
+                const fp = document.createElement('p');
+
+
+        const cardBackDiv = document.createElement('div');
+        cardBackDiv.className('card_face card_face-back');
+
+            const backInfoDiv = document.createElement('div');
+            backInfoDiv.id('back-info');
+
+                const divHeader = document.createElement('div');
+                divHeader.id('back-header');
+
+                    const backH1 = document.createElement('h1');
+                    backH1.id('back-h1');
+
+                const backBlockDiv = document.createElement('div');
+                backBlockDiv.id('back-block');
+
+                    const backLeftDiv = document.createElement('div');
+                    backLeftDiv.id('back-left');
+
+                        const lp1 = document.createElement('p');
+                        const lp2 = document.createElement('p');
+                        const lp3 = document.createElement('p');
+                        const lp4 = document.createElement('p');
+                        const lp5 = document.createElement('p');
+                        const lp6 = document.createElement('p');
+                    
+                    const backRightDiv = document.createElement('div');
+                    backRightDiv.id('back-right');
+    
+                        const rp1 = document.createElement('p');
+                        const rp2 = document.createElement('p');
+                        const rp3 = document.createElement('p');
+                        const rp4 = document.createElement('p');
+                        const rp5 = document.createElement('p');
+                        const rp6 = document.createElement('p');
+
+    
+
+    conatainer.innerHTML = newCardHTML
+
+  })
+
 //card flip
 
 //Use Data to Create Cards
