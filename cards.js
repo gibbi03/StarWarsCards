@@ -185,7 +185,7 @@ function get30SWPeople(params) {
 
   get30SWPeople();
 
-  /*const newCardForm = document.querySelector('#newCardForm');
+  const newCardForm = document.querySelector('#newCardForm');
 
   newCardForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -200,7 +200,7 @@ function get30SWPeople(params) {
         newCardObj[pair[0]] = pair[1]
     }
 
-    /*const newCardHTML = `
+    const newCardHTML = `
     <div class="scene">
         <div class="card">
             
@@ -226,19 +226,19 @@ function get30SWPeople(params) {
                                 <p>HAIR</p>
                             </div>
                             <div id="back-right">
-                                <p>${newCardObj.dob}</p>
-                                <p>${newCardObj.gender}</p>
-                                <p>${newCardObj.height}</p>
-                                <p>${newCardObj.mass}</p>
-                                <p>${newCardObj.eyes}</p>
-                                <p>${newCardObj.hair}</p>
+                                <p>${newCardObj.DOB}</p>
+                                <p>${newCardObj.SEX}</p>
+                                <p>${newCardObj.HGT}</p>
+                                <p>${newCardObj.MASS}</p>
+                                <p>${newCardObj.EYES}</p>
+                                <p>${newCardObj.HAIR}</p>
                             </div>
                         </div>     
                     </div>
                 </div>
 
         </div>
-    </div> `*/
+    </div> `
 
     /*const sceneDiv = document.createElement('div');
     sceneDiv.className('scene');
@@ -286,12 +286,18 @@ function get30SWPeople(params) {
                         const rp3 = document.createElement('p');
                         const rp4 = document.createElement('p');
                         const rp5 = document.createElement('p');
-                        const rp6 = document.createElement('p');
+                        const rp6 = document.createElement('p');*/
 
-    conatainer.innerHTML = newCardHTML
-
+    conatainer.innerHTML = newCardHTML;
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener( 'click', function() {
+            card.classList.toggle('is-flipped');
+                                                    }
+        );
+    })
   })
-  */
+
 
 //card flip
 
