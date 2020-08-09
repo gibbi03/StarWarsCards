@@ -185,7 +185,7 @@ function get30SWPeople(params) {
 
   get30SWPeople();
 
-  const newCardForm = document.querySelector('#newCardForm');
+  /*const newCardForm = document.querySelector('#newCardForm');
 
   newCardForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -240,7 +240,7 @@ function get30SWPeople(params) {
         </div>
     </div> `*/
 
-    const sceneDiv = document.createElement('div');
+    /*const sceneDiv = document.createElement('div');
     sceneDiv.className('scene');
 
         const cardFrontDiv = document.createElement('div');
@@ -288,11 +288,10 @@ function get30SWPeople(params) {
                         const rp5 = document.createElement('p');
                         const rp6 = document.createElement('p');
 
-    
-
     conatainer.innerHTML = newCardHTML
 
   })
+  */
 
 //card flip
 
