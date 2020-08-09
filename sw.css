@@ -2,112 +2,7 @@
 body, nav, header, footer {
     font-family: 'Archivo';
 }
-/*:::::::::PHONE:::::::::*/
-@media only screen and (max-width: 600px) {
-    img {
-        display: block;
-        width: 100%;
-    }
-   
-    section a:link {
-        text-decoration: none;
-    }
 
-    section a:active {
-        text-decoration: none;
-    }
-
-    section a:visited {
-        text-decoration: none;
-    }
-
-
-
-
-
-    /*----------NAVBAR-----------*/
-    
-    #navbar {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        background-color: #2D2D2D;
-        margin: 0;
-        padding: 1rem 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        box-shadow: 10px 1px 5px rgba(0, 0, 0, 0.15);
-    }
-    
-    #navbar div {
-    font-size: 1.3rem;
-    margin-right: 2%;
-    text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.15);
-    padding: 0.1875rem ;
-    }
-    
-    #navwelcome a:link {
-        color: #39e1ff;
-    }
-    
-    #navwelcome a:visited {
-        color: #39e1ff;
-    }
-    
-    #navprojects a:link {
-        color: #e097ff;
-    }
-    
-    #navprojects a:visited {
-        color: #e097ff;
-    }
-
-    #navabout a:link {
-        color: #ff8d67;
-    }
-    
-    #navabout a:visited {
-        color: #ff8d67;
-    }
-    
-    #navbar a:link{
-        text-decoration: none;
-    }
-    
-    #navbar a:active {
-        color: rgb(255, 243, 227);
-    }
-    
-    #navbar a:hover {
-        color: rgb(255, 243, 227);
-    }
-    
-
-
-
-
-    /*---------BODY-------------*/
-
-    body {
-        background-color: #212121;
-    }
-    
-/*----------FOOTER----------*/
-footer {
-    color: rgb(107, 107, 107);
-    letter-spacing: .2rem;
-    text-align: center;
-}
-}
-
-
-
-
-
-/*:::::::::DESKTOP:::::::::*/
-
-@media only screen and (min-width: 601px) {
     
     a:link {
         text-decoration: none;
@@ -123,16 +18,21 @@ footer {
 
 
 /*--------HEADER------------*/
+header {
+    text-align: center;
+}
 
 header h1 {
     color: white;
+    border-bottom: .2rem solid #EEDB00;
+    padding: 1rem;
 }
 
 
 /*---------BODY-------------*/
 
     body {
-        background-color: #212121;
+        background-color: #757575;
     }
 
 
@@ -141,8 +41,8 @@ header h1 {
 /*-----------CARDS-----------*/
 #container {
     display: flex;
-    justify-content: space-evenly;
     flex-flow: wrap row;
+    padding: 1rem auto;
 }
 
 /*--------Card--------------*/
@@ -151,7 +51,6 @@ header h1 {
         height: 16rem;
         margin: 1rem 1rem;
         perspective: 600px;
-        box-shadow: 0px 0px 3px .25px rgba(3, 3, 3, 0.356);
     }
     
   
@@ -172,9 +71,10 @@ header h1 {
         position: absolute;
         width: 100%;
         height: 100%;
-        color: white;
         font-weight: bold;
         backface-visibility: hidden;
+        border: .1rem solid #EEDB00;
+        box-shadow: 0px 0px 3px .25px rgba(27, 27, 27, 0.356);
     }
   
     .card_face-front {
@@ -194,12 +94,14 @@ header h1 {
         margin: 0;
         text-align: center;
         position: relative;
-        bottom: 3.7rem;
-        padding: 1.25rem 0rem;
+        bottom: 3.29rem;
+        padding: 1rem 0rem;
         backface-visibility: hidden;
         color: #EEDB00;
         text-transform: uppercase;
         font-size: .9rem;
+        border-top: .1rem solid #EEDB00;
+        border-bottom: .1rem solid #EEDB00;
     }
 
 
@@ -255,4 +157,3 @@ header h1 {
         letter-spacing: .2rem;
         text-align: center;
     }
-}
