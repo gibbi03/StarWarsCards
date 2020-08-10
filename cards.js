@@ -127,46 +127,51 @@ function get30SWPeople(params) {
     )
     console.log(arrayOfPeople)
 
-    const htmlForCards = arrayOfPeople.map(person => {
+    function personToHtml(person)
+    {
         return `
-    <div class="scene">
-        <div class="card">
-            
-                <div class="card_face card_face-front">
-                    <div id="front-info">
-                            <img src="swimg/${person.id}.jpg">
-                            <p>${person.name}</p>
+        <div class="scene">
+            <div class="card">
+                
+                    <div class="card_face card_face-front">
+                        <div id="front-info">
+                                <img src="swimg/${person.id}.jpg">
+                                <p>${person.name}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card_face card_face-back">
-                    <div id="${person.id}back-info">
-                            <div id="back-header">
-                                <h1 id="back-h1">${person.name}</h1>
-                            </div>
-                        <div id="backblock">
-                            <div id="back-left">
-                                <p>DOB</p>
-                                <p>SEX</p>
-                                <p>HGT</p>
-                                <p>MASS</p>
-                                <p>EYES</p>
-                                <p>HAIR</p>
-                            </div>
-                            <div id="back-right">
-                                <p>${person.dob}</p>
-                                <p>${person.gender}</p>
-                                <p>${person.height}</p>
-                                <p>${person.mass}</p>
-                                <p>${person.eyes}</p>
-                                <p>${person.hair}</p>
-                            </div>
-                        </div>     
+    
+                    <div class="card_face card_face-back">
+                        <div id="${person.id}back-info">
+                                <div id="back-header">
+                                    <h1 id="back-h1">${person.name}</h1>
+                                </div>
+                            <div id="backblock">
+                                <div id="back-left">
+                                    <p>DOB</p>
+                                    <p>SEX</p>
+                                    <p>HGT</p>
+                                    <p>MASS</p>
+                                    <p>EYES</p>
+                                    <p>HAIR</p>
+                                </div>
+                                <div id="back-right">
+                                    <p>${person.dob}</p>
+                                    <p>${person.gender}</p>
+                                    <p>${person.height}</p>
+                                    <p>${person.mass}</p>
+                                    <p>${person.eyes}</p>
+                                    <p>${person.hair}</p>
+                                </div>
+                            </div>     
+                        </div>
                     </div>
-                </div>
+    
+            </div>
+        </div> `
+    }
 
-        </div>
-    </div> `
+    const htmlForCards = arrayOfPeople.map(person => {
+        return personToHtml(person)
     }
     ).join('');
 
@@ -200,6 +205,7 @@ function get30SWPeople(params) {
         newCardObj[pair[0]] = pair[1]
     }
 
+    
     const newCardHTML = `
     <div class="scene">
         <div class="card">
@@ -288,7 +294,7 @@ function get30SWPeople(params) {
                         const rp5 = document.createElement('p');
                         const rp6 = document.createElement('p');*/
 
-    conatainer.innerHTML = newCardHTML;
+    conatainer.innerHTML += newCardHTML;
     var cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener( 'click', function() {
